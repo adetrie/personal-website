@@ -2,6 +2,8 @@ trigger:
   branches:
     include:
       - '*'
+variables:
+  - group: docker-variable
 
 pool:
   vmImage: ubuntu-latest
@@ -17,4 +19,4 @@ steps:
       jdkDirectory: '/usr/local/openjdk-17'
       publishJUnitResults: true
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
-      goals: 'spring-boot:build-image'
+      goals: 'spring-boot:build-image -Ddocker.credentials.username=$(docker.credentials.username) -Ddocker.credentials.password=$(docker.credentials.password)'
