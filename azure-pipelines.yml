@@ -4,15 +4,17 @@ trigger:
       - '*'
 
 pool:
-  name: 'Azure Pipelines'
-  vmImage: 'ubuntu-22.04'
+  vmImage: ubuntu-latest
+
+container: maven:3.8.5-openjdk-17-slim
 
 steps:
-
-  - task: Bash@3
+  - task: Maven@3
     inputs:
-      targetType: 'inline'
-      script: |
-        chmod +x mvnw # https://github.com/pascalgrimaud/generator-jhipster-docker/issues/29
-        echo 'Build docker image with Maven wrapper'
-        ./mvnw spring-boot:build-image
+      mavenPomFile: 'pom.xml'
+      mavenOptions: '-Xmx1024m'
+      javaHomeOption: 'path'
+      jdkDirectory: '/usr/local/openjdk-17'
+      publishJUnitResults: false
+      mavenAuthenticateFeed: true
+      effectivePomSkip: true
