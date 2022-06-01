@@ -13,5 +13,6 @@ steps:
     inputs:
       targetType: 'inline'
       script: |
+        chmod +x mvnw # https://github.com/pascalgrimaud/generator-jhipster-docker/issues/29
         echo 'Build docker image with Maven wrapper'
         ./mvnw spring-boot:build-image
