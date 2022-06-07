@@ -46,8 +46,19 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>alexisdetrie/personal-website/${project.artifactId}:latest</name>
+                        <name>alexisdetrie/${project.artifactId}:latest</name>
+                        <publish>true</publish>
+                        <env>
+                            <BP_JVM_VERSION>17</BP_JVM_VERSION>
+                        </env>
                     </image>
+                    <docker>
+                        <publishRegistry>
+                            <username>${docker.credentials.username}</username>
+                            <password>${docker.credentials.password} </password>
+                            <url>https://registry.hub.docker.com</url>
+                        </publishRegistry>
+                    </docker>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
