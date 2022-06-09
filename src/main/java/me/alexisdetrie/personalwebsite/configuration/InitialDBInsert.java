@@ -1,0 +1,172 @@
+package me.alexisdetrie.personalwebsite.configuration;
+
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import me.alexisdetrie.personalwebsite.domain.*;
+import me.alexisdetrie.personalwebsite.repository.UserRepository;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+
+/**
+ * Load default data when application is <b>started</b>
+ *
+ * @author Alexis
+ * @since 1.0.0
+ */
+@AllArgsConstructor
+@Slf4j
+@Configuration
+@Profile("dev")
+public class InitialDBInsert {
+
+    private UserRepository repository;
+
+    @Bean
+    public CommandLineRunner demo(UserRepository repository) {
+        return (args) -> {
+            log.info("Starting InitialDBInsert");
+            log.info("Removing existing data");
+            repository.deleteAll().block();
+
+            log.info("Create default data");
+            List<ArchitectureExperience> architectureExperiences = getArchitectureExperiences();
+            List<DeveloperExperience> developerExperiences = getDeveloperExperiences();
+
+            List<Education> educations = getEducations();
+            User me = new User("Alexis", "Détrie", true, architectureExperiences, developerExperiences, educations);
+
+            repository
+                    .save(me)
+                    .block();
+
+            // fetch all customers
+            log.info("User found with findAll():");
+            log.info("-------------------------------");
+            repository.findAll()
+                    .collectList()
+                    .block()
+                    .stream()
+                    .forEach(user -> log.info(user.toString()));
+
+            log.info("End InitialDBInsert");
+
+        };
+    }
+
+    private List<Education> getEducations() {
+        List<Education> educations = new ArrayList<>();
+        List<Education.EducationItem> educationItems = new ArrayList<>();
+        educationItems.add(new Education.EducationItem("Supinfo Metz", "5ième année du cycle ingénierie (BAC +5)", 2009, 2011));
+        educationItems.add(new Education.EducationItem("eXia.cesi Nancy", "Responsable en ingénierie des logiciels (BAC +4)", 2007, 2009));
+        educationItems.add(new Education.EducationItem("BTS informatique de gestion ", "Option développeur d’applications (BAC +2)", 2005, 2007));
+        educations.add(new Education(educationItems));
+        return educations;
+    }
+
+    private List<DeveloperExperience> getDeveloperExperiences() {
+        List<DeveloperExperience> developerExperiences = new ArrayList<>();
+        developerExperiences.add(pwcDeveloperExperience());
+        developerExperiences.add(ctgDeveloperExperience());
+        developerExperiences.add(neopixlDeveloperExperience());
+        developerExperiences.add(sogetiDeveloperExperience());
+
+        return developerExperiences;
+    }
+
+    private DeveloperExperience pwcDeveloperExperience() {
+        ArrayList<Experience.ExperienceItem> experienceItems = new ArrayList<>();
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Java/JEE, Eclipse (RAD), WebSphere 8, Oracle DB, EJB2, EJB 3, Hibernate, Struts 2, Tiles, SOAP, REST, jQuery, comptabilité, LuxTrust."));
+
+        DeveloperExperience developerExperience = DeveloperExperience.builder()
+                .jobTitle("Java developer ")
+                .company("PricewaterhouseCoopers Luxembourg")
+                .startDate(LocalDate.of(2015, 5, 1))
+                .endDate(LocalDate.of(2016, 9, 1))
+                .experienceItems(experienceItems)
+                .build();
+
+        return developerExperience;
+    }
+
+    private DeveloperExperience ctgDeveloperExperience() {
+        ArrayList<Experience.ExperienceItem> experienceItems = new ArrayList<>();
+        experienceItems.add(new Experience.ExperienceItem("Spuerkeess", "Java/JEE, Eclipse (RAD), WebSphere 8, DB2, CICS, ANT, CVS, SOAP"));
+        experienceItems.add(new Experience.ExperienceItem("Chambre de Commerce Luxembourg", "JEE 6, EJB 3.1, GlassFish, Oracle DB, Primefaces/JSF, Maven, Git, Eclipse"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "JEE 6, EJB 3.1, GlassFish, MySQL, Primefaces/JSF, Maven, Git, Eclipse"));
+
+        DeveloperExperience developerExperience = DeveloperExperience.builder()
+                .jobTitle("Java developer")
+                .company("CTG")
+                .startDate(LocalDate.of(2013, 8, 1))
+                .endDate(LocalDate.of(2015, 5, 1))
+                .experienceItems(experienceItems)
+                .build();
+
+        return developerExperience;
+    }
+
+    private DeveloperExperience neopixlDeveloperExperience() {
+        ArrayList<Experience.ExperienceItem> experienceItems = new ArrayList<>();
+        experienceItems.add(new Experience.ExperienceItem("PushPixl", "Push notification, SAAS, Tomcat, Spring, REST, MySQL, Hibernate, jUnit, Jenkins, Maven, Git, Eclipse, MacOs."));
+        experienceItems.add(new Experience.ExperienceItem("Wort", "Push notification, Android, Maven, Git, Eclipse, MacOs."));
+        experienceItems.add(new Experience.ExperienceItem("Forem (BE)", "Formateur, Android."));
+
+        DeveloperExperience developerExperience = DeveloperExperience.builder()
+                .jobTitle("Java back end and mobile developer")
+                .company("Neopixl")
+                .startDate(LocalDate.of(2013, 1, 1))
+                .endDate(LocalDate.of(2013, 7, 1))
+                .experienceItems(experienceItems)
+                .build();
+
+        return developerExperience;
+    }
+
+    private DeveloperExperience sogetiDeveloperExperience() {
+        ArrayList<Experience.ExperienceItem> experienceItems = new ArrayList<>();
+        experienceItems.add(new Experience.ExperienceItem("Adem", "JEE, Mainframe IBM, CTIE, JEE6, OpenJPA, EJB 3, Struts, HTML, jQuery, jUnit, Sélénium, Jenkins, WebSphere 8, DB2."));
+
+        DeveloperExperience developerExperience = DeveloperExperience.builder()
+                .jobTitle("Java developer")
+                .company("Capgemini Sogeti Luxembourg")
+                .startDate(LocalDate.of(2011, 10, 1))
+                .endDate(LocalDate.of(2013, 1, 1))
+                .experienceItems(experienceItems)
+                .build();
+
+        return developerExperience;
+    }
+
+
+    private List<ArchitectureExperience> getArchitectureExperiences() {
+        ArrayList<Experience.ExperienceItem> experienceItems = new ArrayList<>();
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Réalisation d’un framework basé sur Spring/Spring Boot"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Guideline et migration d’applications WebSphere 8 vers WebSphere 9"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Guideline et migration d’applications sur Maven "));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Guideline et migration d’applications sur TFS/Azure DevOps"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Participation à la mise en place de SSDLC"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Participation à la migration de JVM Oracle vers JVM Azul"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Mise en place d’authentifications « modernes » (OAuth 2 / SAML)"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Mise en place de Kubernetes / Docker pour les applications Java"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Animation de la communauté Java à Luxembourg "));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Support / Formation / Facilitateur"));
+
+        ArchitectureExperience architectureExperience = ArchitectureExperience.builder()
+                .jobTitle("IT Solution Architect")
+                .company("PricewaterhouseCoopers Luxembourg")
+                .startDate(LocalDate.of(2016, 9, 1))
+                .endDate(LocalDate.of(2021, 8, 15))
+                .experienceItems(experienceItems)
+                .build();
+
+        List<ArchitectureExperience> architectureExperiences = List.of(architectureExperience);
+        return architectureExperiences;
+    }
+}
