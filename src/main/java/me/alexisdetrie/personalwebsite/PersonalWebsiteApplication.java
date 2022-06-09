@@ -13,7 +13,6 @@ public class PersonalWebsiteApplication {
         SpringApplication.run(PersonalWebsiteApplication.class, args);
     }
 
-
     @GetMapping(value = "/ping")
     private String ping() {
         return "pong";
