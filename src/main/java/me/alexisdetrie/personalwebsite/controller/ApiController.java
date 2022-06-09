@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import me.alexisdetrie.personalwebsite.domain.User;
 import me.alexisdetrie.personalwebsite.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
@@ -13,7 +14,8 @@ import reactor.core.publisher.Mono;
  * @author Alexis
  * @since 1.0.0
  */
-@RestController(value = "/api")
+@RestController
+@RequestMapping("/api")
 @AllArgsConstructor
 public class ApiController {
 
