@@ -1,8 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import NavBar from "./NavBar";
+import NavBar from "./component/NavBar";
+import SectionHome from "./screen/SectionHome";
+import SectionAbout from "./screen/SectionAbout";
+import SectionSkills from "./screen/SectionSkills";
+import SectionExperiences from "./screen/SectionExperiences";
+import SectionSchool from "./screen/SectionSchool";
+import SectionMyPersonalPage from "./screen/SectionMyPersonalPage";
+import SectionContact from "./screen/SectionContact";
 
-const HomeScreen = () => {
+const Home = () => {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -35,6 +42,13 @@ const HomeScreen = () => {
     } else {
         return (<div>
                 <NavBar />
+                <SectionHome />
+                <SectionAbout />
+                <SectionSkills />
+                <SectionExperiences />
+                <SectionSchool />
+                <SectionMyPersonalPage />
+                <SectionContact />
                 <h1 className="text-3xl font-bold underline">
                     {me.firstName}
                 </h1>
@@ -44,4 +58,4 @@ const HomeScreen = () => {
     }
 }
 
-export default HomeScreen;
+export default Home;
