@@ -33,9 +33,9 @@ const HomeScreen = () => {
         return <div>Loading...</div>;
     } else {
         return (
-            <ul>
-                {<li key={me.id}>{me.firstName}</li>}
-            </ul>
+            <h1 className="text-3xl font-bold underline">
+                {me.firstName}
+            </h1>
         );
     }
 }
