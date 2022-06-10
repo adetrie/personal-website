@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
+import NavBar from "./NavBar";
 
 const HomeScreen = () => {
 
@@ -32,10 +33,13 @@ const HomeScreen = () => {
     } else if (!isLoaded) {
         return <div>Loading...</div>;
     } else {
-        return (
-            <h1 className="text-3xl font-bold underline">
-                {me.firstName}
-            </h1>
+        return (<div>
+                <NavBar />
+                <h1 className="text-3xl font-bold underline">
+                    {me.firstName}
+                </h1>
+            </div>
+
         );
     }
 }
