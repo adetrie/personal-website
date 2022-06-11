@@ -22,14 +22,15 @@ const SectionHome = () => {
                 <div className="inline-block align-top w-full text-center">
                     <h2 className="text-3xl inline-block">
                         Je suis&nbsp;
-                        <Typewriter
-                            wrapperClassName='float: right'
-                            options={{
-                                strings: ['un développeur Java', 'un architecte Java', 'un développeur React', 'un développeur JEE/Jakarta', 'un développeur Spring'],
-                                autoStart: true,
-                                loop: true,
-                            }}
-                        />
+                        <div className="float-right">
+                            <Typewriter
+                                options={{
+                                    strings: ['un développeur Java', 'un architecte Java', 'un développeur React', 'un développeur JEE/Jakarta', 'un développeur Spring'],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+                        </div>
                     </h2>
                 </div>
             </div>
