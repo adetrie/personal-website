@@ -16,7 +16,8 @@ const Home = () => {
     const [me, setMe] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8080/api/me", {
+        
+        fetch("/api/me", {
             mode: 'cors',
             headers: {
                 'Access-Control-Allow-Origin': '*'
