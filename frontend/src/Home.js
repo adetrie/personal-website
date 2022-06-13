@@ -16,7 +16,7 @@ const Home = () => {
     const [me, setMe] = useState([]);
 
     useEffect(() => {
-        
+
         fetch("/api/me", {
             mode: 'cors',
             headers: {
@@ -42,14 +42,16 @@ const Home = () => {
         return <div>Loading...</div>;
     } else {
         return (<div>
-                <NavBar />
-                <SectionHome />
-                <SectionAbout />
-                <SectionSkills />
-                <SectionExperiences />
-                <SectionSchool />
-                <SectionMyPersonalPage />
-                <SectionContact />
+                <NavBar/>
+                <SectionHome/>
+                <SectionAbout/>
+                <SectionSkills/>
+                <SectionExperiences
+                    architectureExperiences={me.architectureExperiences}
+                    developerExperiences={me.developerExperiences}/>
+                <SectionSchool educationItems={me.educations[0]}/>
+                <SectionMyPersonalPage/>
+                <SectionContact/>
                 <h1 className="text-3xl font-bold underline">
                     {me.firstName}
                 </h1>
