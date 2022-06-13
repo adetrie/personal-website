@@ -35,3 +35,4 @@ node_modules
 frontend/yarn.lock
 package-lock.json
 frontend/node
+yarn.lock
