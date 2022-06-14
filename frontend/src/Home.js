@@ -45,7 +45,7 @@ const Home = () => {
                 <NavBar/>
                 <SectionHome/>
                 <SectionAbout/>
-                <SectionSkills/>
+                <SectionSkills skills={me.skills}/>
                 <SectionExperiences
                     architectureExperiences={me.architectureExperiences}
                     developerExperiences={me.developerExperiences}/>

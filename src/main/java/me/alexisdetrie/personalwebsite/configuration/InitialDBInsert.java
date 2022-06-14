@@ -38,9 +38,10 @@ public class InitialDBInsert {
             log.info("Create default data");
             List<ArchitectureExperience> architectureExperiences = getArchitectureExperiences();
             List<DeveloperExperience> developerExperiences = getDeveloperExperiences();
+            List<Skill> skills = getSkills();
 
             List<Education> educations = getEducations();
-            User me = new User("Alexis", "Détrie", true, architectureExperiences, developerExperiences, educations);
+            User me = new User("Alexis", "Détrie", true, architectureExperiences, developerExperiences, educations, skills);
 
             repository
                     .save(me)
@@ -58,6 +59,26 @@ public class InitialDBInsert {
             log.info("End InitialDBInsert");
 
         };
+    }
+
+    private ArrayList<Skill> getSkills() {
+        ArrayList<Skill> skills = new ArrayList<>();
+
+        skills.add(new Skill("Java", 85));
+        skills.add(new Skill("Spring / Spring Boot", 75));
+        skills.add(new Skill("Java EE / Jakarta", 70));
+        skills.add(new Skill("IntelliJ IDEA", 80));
+        skills.add(new Skill("Eclipse", 70));
+        skills.add(new Skill("Maven", 85));
+        skills.add(new Skill("CI / CD", 85));
+        skills.add(new Skill("Git/SVN/CVS", 85));
+        skills.add(new Skill("Git/SVN/CVS", 85));
+        skills.add(new Skill("Docker", 60));
+        skills.add(new Skill("Kubernetes", 30));
+        skills.add(new Skill("OAuth 2 / OpenID Connect", 60));
+        skills.add(new Skill("SAML 2", 40));
+
+        return skills;
     }
 
     private List<Education> getEducations() {

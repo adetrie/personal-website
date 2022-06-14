@@ -1,11 +1,24 @@
 import React from 'react';
 import '../App.css';
+import SkillItem from "../component/skill/ExperienceItem";
 
-const SectionSkills = () => {
-
+const SectionSkills = ({skills}) => {
 
     return (
-        <div></div>
+        <section className="text-gray-600 body-font">
+            <div className="container px-5 py-24 mx-auto">
+                <div className="flex flex-wrap -m-4">
+                    {
+                        skills.map((skill, index) => {
+                                return <SkillItem
+                                    key={skill.skillName}
+                                    item={skill}
+                                />
+                        })
+                    }
+                </div>
+            </div>
+        </section>
     );
 }
 

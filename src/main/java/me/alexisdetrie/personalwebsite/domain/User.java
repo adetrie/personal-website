@@ -14,13 +14,14 @@ import java.util.List;
 @ToString
 public class User {
 
-    public User(String firstName, String lastName, boolean me, List<ArchitectureExperience> architectureExperiences, List<DeveloperExperience> developerExperiences, List<Education> educations) {
+    public User(String firstName, String lastName, boolean me, List<ArchitectureExperience> architectureExperiences, List<DeveloperExperience> developerExperiences, List<Education> educations, List<Skill> skills) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.me = me;
         this.architectureExperiences = architectureExperiences;
         this.developerExperiences = developerExperiences;
         this.educations = educations;
+        this.skills = skills;
     }
 
     @Id
@@ -45,6 +46,9 @@ public class User {
 
     @Getter @Setter
     private List<Education> educations;
+
+    @Getter @Setter
+    private List<Skill> skills;
 
 
 }
