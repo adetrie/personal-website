@@ -64,19 +64,29 @@ public class InitialDBInsert {
     private ArrayList<Skill> getSkills() {
         ArrayList<Skill> skills = new ArrayList<>();
 
-        skills.add(new Skill("Java", 85));
-        skills.add(new Skill("Spring / Spring Boot", 75));
-        skills.add(new Skill("Java EE / Jakarta", 70));
-        skills.add(new Skill("IntelliJ IDEA", 80));
-        skills.add(new Skill("Eclipse", 70));
-        skills.add(new Skill("Maven", 85));
-        skills.add(new Skill("CI / CD", 85));
-        skills.add(new Skill("Git/SVN/CVS", 85));
-        skills.add(new Skill("Git/SVN/CVS", 85));
-        skills.add(new Skill("Docker", 60));
-        skills.add(new Skill("Kubernetes", 30));
-        skills.add(new Skill("OAuth 2 / OpenID Connect", 60));
-        skills.add(new Skill("SAML 2", 40));
+        SkillCategory programming = new SkillCategory("Programmation", 0);
+        SkillCategory ide = new SkillCategory("IDE", 4);
+        SkillCategory devSecOps = new SkillCategory("DevSecOps", 1);
+        SkillCategory versioning = new SkillCategory("Versioning", 3);
+        SkillCategory security = new SkillCategory("Sécurité", 2);
+
+        skills.add(new Skill("Java", 85, "java", programming));
+        skills.add(new Skill("JavaScript", 50, "javascript", programming));
+        skills.add(new Skill("React JS", 50, "reactjs", programming));
+        skills.add(new Skill("HTML/CSS", 70, "html", programming));
+        skills.add(new Skill("Spring / Spring Boot", 75, "spring", programming));
+        skills.add(new Skill("Java EE / Jakarta", 70, "java", programming));
+        skills.add(new Skill("IntelliJ IDEA", 80, "intellij", ide));
+        skills.add(new Skill("Eclipse", 70, "eclipse", ide));
+        skills.add(new Skill("Maven", 85, "maven", programming));
+        skills.add(new Skill("CI / CD", 85, "cicd", devSecOps));
+        skills.add(new Skill("Git", 70, "git", versioning));
+        skills.add(new Skill("SVN", 65, "svn", versioning));
+        skills.add(new Skill("CVS", 50, "cvs", versioning));
+        skills.add(new Skill("Docker", 60, "docker", devSecOps));
+        skills.add(new Skill("Kubernetes", 30, "k8s", devSecOps));
+        skills.add(new Skill("OAuth 2 / OpenID Connect", 60, "oauth2", security));
+        skills.add(new Skill("SAML 2", 40, "saml", security));
 
         return skills;
     }

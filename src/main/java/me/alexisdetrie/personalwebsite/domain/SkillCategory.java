@@ -2,26 +2,22 @@ package me.alexisdetrie.personalwebsite.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * Entity : represents a skill
+ * Entity : represents a skill category
  *
  * @author Alexis
  * @since 1.0.0
  */
 @AllArgsConstructor
-public class Skill {
+@NoArgsConstructor
+public class SkillCategory {
 
     @Getter @Setter
-    private String skillName;
+    private String skillCategoryName;
 
     @Getter @Setter
-    private int skillLevel;
-
-    @Getter @Setter
-    private String logo;
-
-    @Getter @Setter
-    private SkillCategory category;
+    private int order;
 }
