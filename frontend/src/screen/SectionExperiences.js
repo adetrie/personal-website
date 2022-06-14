@@ -5,7 +5,7 @@ import WorkList from "../component/work/WorkList";
 
 const SectionExperiences = ({architectureExperiences, developerExperiences}) => {
     return (
-        <section className="text-gray-600 body-font">
+        <section id="section-experience" className="min-h-screen text-gray-600 body-font">
             <h1>Mes expériences en tant qu'architecte</h1>
             <DefaultContainer>
                 <WorkList

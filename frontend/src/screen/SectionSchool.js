@@ -7,7 +7,7 @@ const SectionSchool = ({educationItems}) => {
 
 
     return (
-        <section className="text-gray-600 body-font">
+        <section id="section-school" className="min-h-screen text-gray-600 body-font">
             <DefaultContainer>
                 <div className="lg:w-2/5 md:w-1/2">
                     <img className=" mr-10 object-cover object-center p-5"

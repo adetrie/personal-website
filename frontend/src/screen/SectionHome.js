@@ -7,7 +7,7 @@ const SectionHome = () => {
 
 
     return (
-        <div className="flex items-center justify-center h-screen">
+        <div id="section-home" className="min-h-screen flex items-center justify-center">
             <div>
                 <h1 className="text-7xl font-bold mb-10 text-center">
                     Salut, je suis Alexis.

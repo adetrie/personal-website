@@ -5,7 +5,7 @@ const SectionMyPersonalPage = () => {
 
 
     return (
-        <div></div>
+        <div id="section-my-personal-page" className="min-h-screen " ></div>
     );
 }
 

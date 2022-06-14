@@ -9,7 +9,7 @@ export class SectionContact extends Component {
 
     render() {
         return (
-            <section className="text-gray-600 body-font relative">
+            <section id="section-contact" className="text-gray-600 body-font relative">
                 <div className="absolute inset-0 bg-gray-300">
                     <Map google={this.props.google} zoom={14} initialCenter={{lat: 49.611621, lng: 6.1319346}}/>
                 </div>
