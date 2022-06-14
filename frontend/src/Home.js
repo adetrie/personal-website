@@ -8,6 +8,7 @@ import SectionExperiences from "./screen/SectionExperiences";
 import SectionSchool from "./screen/SectionSchool";
 import SectionMyPersonalPage from "./screen/SectionMyPersonalPage";
 import SectionContact from "./screen/SectionContact";
+import FabScroll from "./component/fab/FabScroll";
 
 const Home = () => {
 
@@ -53,8 +54,8 @@ const Home = () => {
                 <SectionSchool educationItems={me.educations[0]}/>
                 <SectionMyPersonalPage/>
                 <SectionContact/>
+                <FabScroll />
             </div>
-
         );
     }
 }
