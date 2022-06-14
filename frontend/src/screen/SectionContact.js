@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../App.css';
-import {GoogleApiWrapper, InfoWindow, Map, Marker} from 'google-maps-react';
+import {GoogleApiWrapper, Map} from 'google-maps-react';
 
 export class SectionContact extends Component {
     onClickSendMessage() {

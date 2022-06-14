@@ -41,7 +41,8 @@ const Home = () => {
     } else if (!isLoaded) {
         return <div>Loading...</div>;
     } else {
-        return (<div>
+        return (
+            <div>
                 <NavBar/>
                 <SectionHome/>
                 <SectionAbout/>
@@ -52,9 +53,6 @@ const Home = () => {
                 <SectionSchool educationItems={me.educations[0]}/>
                 <SectionMyPersonalPage/>
                 <SectionContact/>
-                <h1 className="text-3xl font-bold underline">
-                    {me.firstName}
-                </h1>
             </div>
 
         );
