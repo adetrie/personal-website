@@ -33,3 +33,6 @@ code {
     background-image: paint(fluidPattern);
 }
 
+.active {
+    border-color: #34d399;
+}

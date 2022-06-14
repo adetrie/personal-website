@@ -1,8 +1,10 @@
 {
   "dependencies": {
-    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "@icons-pack/react-simple-icons": "^5.0.0",
+    "react-bootstrap-icons": "^1.8.2",
     "react-cookie": "^4.1.1",
     "react-router-dom": "^5.3.0",
+    "react-scroll": "^1.8.7",
     "reactstrap": "^8.10.0"
   }
 }
