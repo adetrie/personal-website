@@ -13,7 +13,7 @@ const SchoolList = ({schoolHistories}) => {
     });
 
     return (
-        <div className="lg:w-3/5 md:w-1/2">
+        <div>
             {
                 schoolHistories.map((schoolHistory, index) => {
                     if (index + 1 !== nbSchool) {

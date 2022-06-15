@@ -1,12 +1,16 @@
 import React from 'react';
 import '../../App.css';
 import {
-    SiApachemaven, SiAzurepipelines, SiDocker,
-    SiEclipseide, SiGit,
+    SiApachemaven,
+    SiAzurepipelines,
+    SiDocker,
+    SiEclipseide,
+    SiGit,
     SiHtml5,
     SiIntellijidea,
     SiJava,
-    SiJavascript, SiKubernetes,
+    SiJavascript,
+    SiKubernetes,
     SiReact,
     SiSpring
 } from "react-icons/si";
@@ -35,7 +39,7 @@ const IconGeneric = ({iconName}) => {
         saml: MdSecurity
     };
     let TagIcon = components[iconName];
-    return (<TagIcon /> );
+    return (<TagIcon size={30} /> );
 }
 
 export default IconGeneric;

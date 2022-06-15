@@ -11,7 +11,7 @@ const SchoolItem = ({item}) => {
                 className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">✨
             </div>
             <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">{item.ecole} - {item.titre}</h2>
+                <h2 className="mb-1 tracking-wider">{item.ecole} - {item.titre}</h2>
             </div>
         </div>
 

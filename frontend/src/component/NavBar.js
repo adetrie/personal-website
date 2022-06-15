@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import '../App.css';
 import {Transition} from "@headlessui/react";
-import { Link } from "react-scroll";
+import {Link} from "react-scroll";
+
 const NavBar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -9,11 +10,11 @@ const NavBar = () => {
     return (
         <nav className="bg-white shadow fixed z-40 w-full">
             <div
-                className="container flex items-center justify-center  mx-auto text-gray-600 capitalize">
+                className="container flex items-center justify-center mx-auto capitalize">
                 <div className="flex items-center justify-between h-16">
                     <div className="hidden md:block">
                         <div
-                            className="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize ">
+                            className="container flex items-center justify-center p-6 mx-auto  capitalize ">
                             <Link activeClass="active" smooth spy to="section-home"
                                className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">home</Link>
 
@@ -61,7 +62,7 @@ const NavBar = () => {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             type="button"
-                            className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                            className="inline-flex items-center justify-center p-2 rounded-md  hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
                             aria-controls="mobile-menu"
                             aria-expanded="false"
                         >

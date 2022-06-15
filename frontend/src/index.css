@@ -11,11 +11,6 @@ body {
     background-color: white;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .worklet-canvas {
     --fluid-pattern-seed: 123456;
     --fluid-pattern-bg-color: #1d1934;
@@ -36,3 +31,4 @@ code {
 .active {
     border-color: #34d399;
 }
+

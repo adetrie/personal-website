@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 
 import "react-sweet-progress/lib/style.css";
-import {BsArrowDownCircle, BsArrowUpCircle} from "react-icons/bs";
+import {BsArrowUpCircle} from "react-icons/bs";
 import Scroll from "react-scroll";
 
 const FabScroll = ({item}) => {

@@ -21,17 +21,22 @@ const SectionSkills = ({skills}) => {
         arraySkills.push(<SkillList listSkills={skillMapRow}/>)
     })
     return (
-        <section id="section-skill" className="min-h-screen text-gray-600 body-font">
+        <section id="section-skill" className="min-h-screen items-center justify-center pt-20">
+            <div className="w-full flex items-center justify-center">
+                <div className="h-5 border-b-2 border-amber-400 text-2xl text-center w-10/12">
+                    <span className="bg-white px-5 text-gray-400">Mes compétences</span>
+                </div>
+            </div>
             <div className="container px-5 py-24 mx-auto">
                 {
                     arraySkills.map((skillMapRow) => {
 
-                        return <>
-                            <h2>{skillMapRow.props.listSkills[0].category.skillCategoryName}</h2>
+                        return <div className="mb-20">
+                            <h2 className="mb-10">{skillMapRow.props.listSkills[0].category.skillCategoryName}</h2>
                             <div className="flex flex-wrap -m-4">
                                 {skillMapRow}
                             </div>
-                        </>
+                        </div>
                     })
                 }
             </div>

@@ -14,7 +14,7 @@ const WorkLastItem = ({item}) => {
                 </svg>
             </div>
             <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">{item.jobTitle} - {item.company}</h2>
+                <h2 className="mb-1 tracking-wider">{item.jobTitle} - {item.company}</h2>
                 <p className="leading-relaxed mt-5">
                     <ExperienceList
                         experienceHistories={item.experienceItems}

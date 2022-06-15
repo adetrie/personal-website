@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../App.css';
-import SchoolList from "./SchoolList";
 
 const SchoolLastItem = ({item}) => {
     return (
@@ -14,7 +13,7 @@ const SchoolLastItem = ({item}) => {
                 </svg>
             </div>
             <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">{item.ecole} - {item.titre}</h2>
+                <h2 className="mb-1 tracking-wider">{item.ecole} - {item.titre}</h2>
                 <p className="leading-relaxed mt-5">
                 </p>
             </div>
