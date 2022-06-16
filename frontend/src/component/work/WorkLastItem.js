@@ -1,8 +1,13 @@
 import React from 'react';
 import '../../App.css';
 import ExperienceList from "../experience/ExperienceList";
+import moment from "moment";
 
 const WorkLastItem = ({item}) => {
+
+    const startDate = moment(item.startDate).format('MM-YYYY')
+    const endDate = moment(item.endDate).format('MM-YYYY')
+
     return (
         <div className="flex relative">
             <div
@@ -14,7 +19,10 @@ const WorkLastItem = ({item}) => {
                 </svg>
             </div>
             <div className="flex-grow pl-4">
-                <h2 className="mb-1 tracking-wider">{item.jobTitle} - {item.company}</h2>
+                <h2 className="mb-1 tracking-wider">{item.jobTitle} - {item.company} &nbsp;
+                    <span
+                        className="inline-block py-1 px-2 rounded bg-emerald-400 text-white text-xs font-medium tracking-widest">{startDate} au {endDate}</span>
+                </h2>
                 <p className="leading-relaxed mt-5">
                     <ExperienceList
                         experienceHistories={item.experienceItems}
