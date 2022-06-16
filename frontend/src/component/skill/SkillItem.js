@@ -9,7 +9,7 @@ const SkillItem = ({item}) => {
 
 
     return (
-        <div className="lg:w-1/3 md:w-1/2 p-10 w-full">
+        <div className="lg:w-1/4 md:w-1/2 p-10 w-full">
             <a className="block relative rounded overflow-hidden flex items-center flex-col">
                 <div className="flex justify-center items-center">
                     <Progress type="circle" percent={item.skillLevel}/>

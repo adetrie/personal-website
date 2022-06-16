@@ -3,8 +3,6 @@ import '../../App.css';
 
 const ExperienceItem = ({item}) => {
     return (
-
-
         <div className="flex relative pb-4">
             <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>

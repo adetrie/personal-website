@@ -32,7 +32,7 @@ const SectionSkills = ({skills}) => {
                     arraySkills.map((skillMapRow) => {
 
                         return <div className="mb-20">
-                            <h2 className="mb-10">{skillMapRow.props.listSkills[0].category.skillCategoryName}</h2>
+                            <h2>{skillMapRow.props.listSkills[0].category.skillCategoryName}</h2>
                             <div className="flex flex-wrap -m-4">
                                 {skillMapRow}
                             </div>
