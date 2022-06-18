@@ -76,9 +76,9 @@ public class InitialDBInsert {
         skills.add(new Skill("HTML/CSS", 70, "html", "#dd4b29", programming));
         skills.add(new Skill("Spring / Spring Boot", 75, "spring", "#73b61e", programming));
         skills.add(new Skill("Java EE / Jakarta", 70, "java", "#f1b33d", programming));
-        skills.add(new Skill("IntelliJ IDEA", 80, "intellij", "#e62e58", ide));
+        skills.add(new Skill("IntelliJ IDEA", 80, "intellij", "#000000", ide));
         skills.add(new Skill("Eclipse", 70, "eclipse", "#2b2152", ide));
-        skills.add(new Skill("Maven", 85, "maven", "#e96329", programming));
+        skills.add(new Skill("Maven", 85, "maven", "#d12933", programming));
         skills.add(new Skill("CI / CD", 85, "cicd", "#3b74d0", devSecOps));
         skills.add(new Skill("Git", 70, "git", "#e74e31", versioning));
         skills.add(new Skill("SVN", 65, "svn", "#9cb7d8", versioning));

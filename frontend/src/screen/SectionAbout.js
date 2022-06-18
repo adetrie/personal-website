@@ -33,8 +33,8 @@ const SectionAbout = () => {
                         </div>
                     </div>
 
-                    <div className="lg:w-1/2 sm:w-full flex pt-10 lg:pt-0">
-                        <div className="w-1/2 rounded shadow hover:rotate-1 transition-transform border border-amber-400 p-3 m-2 bg-amber-100">
+                    <div className="lg:w-1/2 w-full flex pt-10 lg:pt-0">
+                        <div className="w-1/2 rounded shadow hover:rotate-1 transition-transform border border-amber-400 p-3 m-1 lg:m-2 bg-amber-100">
                             <ul>
                                 <li><span className="text-4xl text-amber-400">6</span>&nbsp;&nbsp;&nbsp;<span className="text-2xl">ans</span></li>
                                 <li><span className="border-b-2 border-amber-400 -pt-10">&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -42,7 +42,7 @@ const SectionAbout = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="w-1/2 rounded shadow hover:rotate-1 transition-transform border border-red-400 p-3 m-2 bg-red-100">
+                        <div className="w-1/2 rounded shadow hover:rotate-1 transition-transform border border-red-400 p-3 m-1 lg:m-2 bg-red-100">
                             <ul>
                                 <li><span className="text-4xl text-red-400">6</span>&nbsp;&nbsp;&nbsp;<span className="text-2xl">ans</span></li>
                                 <li><span className="border-b-2 border-red-400 -pt-10">&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -50,7 +50,7 @@ const SectionAbout = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="w-1/2 rounded shadow hover:rotate-1 transition-transform border border-emerald-500 p-3 m-2 bg-emerald-100">
+                        <div className="w-1/2 rounded shadow hover:rotate-1 transition-transform border border-emerald-500 p-3 m-1 lg:m-2 bg-emerald-100">
                             <ul>
                                 <li><span className="text-4xl text-emerald-500">2</span>&nbsp;&nbsp;&nbsp;<span className="text-2xl">ans</span></li>
                                 <li><span className="border-b-2 border-emerald-500 -pt-10">&nbsp;&nbsp;&nbsp;&nbsp;</span>
