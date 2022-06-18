@@ -6,7 +6,7 @@ import TopSection from "../component/TopSection";
 
 const SectionExperiences = ({architectureExperiences, developerExperiences}) => {
     return (
-        <section id="section-experience" className="min-h-screen items-center justify-center pt-20">
+        <section id="section-experience" className="min-h-screen items-center justify-center pt-20 worklet-canvas2">
             <TopSection name="Mes expériences professionnelles" />
 
             <div className="container px-5 py-24 mx-auto">
