@@ -16,26 +16,25 @@ const NavBar = () => {
                         <div
                             className="container flex items-center justify-center p-6 mx-auto  capitalize ">
                             <Link activeClass="active" smooth spy to="section-home"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">home</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">Home</Link>
 
                             <Link activeClass="active" smooth spy to="section-about"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">About</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">A propos</Link>
 
                             <Link activeClass="active" smooth spy to="section-skill"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">Skills</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">Mes compétences</Link>
 
                             <Link activeClass="active" smooth spy to="section-experience"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">Experiences</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">Mes expériences pro</Link>
 
                             <Link activeClass="active" smooth spy to="section-school"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">School</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">Mes études</Link>
 
                             <Link activeClass="active" smooth spy to="section-my-personal-page"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">My
-                                personal page</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">Ma page personelle</Link>
 
                             <Link activeClass="active" smooth spy to="section-contact"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">Contact</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">Me contacter</Link>
 
                             <a href="https://www.linkedin.com/in/detriealexis/" target="_blank"
                                className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6">
@@ -62,7 +61,7 @@ const NavBar = () => {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             type="button"
-                            className="inline-flex items-center justify-center p-2 rounded-md  hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                            className="hover:bg-emerald-400 bg-emerald-400 text-white inline-flex items-center justify-center p-2 rounded-md  hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
                             aria-controls="mobile-menu"
                             aria-expanded="false"
                         >
@@ -118,26 +117,25 @@ const NavBar = () => {
                     <div className="md:hidden" id="mobile-menu">
                         <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                            <Link activeClass="active" smooth spy to="section-home"
-                               className="text-gray-800 transition-colors duration-200 transform border-b-2 border-blue-500 mx-1.5 sm:mx-6 block">home</Link>
+                               className="text-gray-800 transition-colors duration-200 transform border-b-2 border-blue-500 mx-1.5 sm:mx-6 block">Home</Link>
 
                             <Link activeClass="active" smooth spy to="section-about"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">About</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">A propos</Link>
 
                             <Link activeClass="active" smooth spy to="section-skill"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Skills</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Mes compétences</Link>
 
                             <Link activeClass="active" smooth spy to="section-experience"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Experiences</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Mes expériences pro</Link>
 
                             <Link activeClass="active" smooth spy to="section-school"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">School</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Mes études</Link>
 
                             <Link activeClass="active" smooth spy to="section-my-personal-page"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">My
-                                personal page</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Ma page personelle</Link>
 
                             <Link activeClass="active" smooth spy to="section-contact"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Contact</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Me contacter</Link>
 
                             <a href="https://www.linkedin.com/in/detriealexis/" target="_blank"
                                className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform mx-1.5 sm:mx-6 block">
