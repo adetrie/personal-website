@@ -8,7 +8,7 @@ const SectionSchool = ({educationItems}) => {
 
 
     return (
-        <section id="section-school" className="min-h-screen items-center justify-center pt-20">
+        <section id="section-school" className="items-center justify-center pt-20">
             <TopSection name="Mes études" />
             <DefaultContainer>
                 <div className="lg:w-2/5 md:w-1/2">
