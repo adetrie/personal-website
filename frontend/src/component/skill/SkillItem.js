@@ -12,7 +12,9 @@ const SkillItem = ({item}) => {
         <div className="lg:w-1/4 pt-10 w-full">
             <a className="block relative rounded overflow-hidden flex items-center flex-col">
                 <div className="flex justify-center items-center">
-                    <Progress type="circle" percent={item.skillLevel}/>
+                    <Progress type="circle" percent={item.skillLevel} theme={{active: {
+                            color: item.color
+                        }}}/>
                 </div>
             </a>
             <div className="mt-4 text-center">

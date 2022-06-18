@@ -22,7 +22,7 @@ const SectionSkills = ({skills}) => {
         arraySkills.push(<SkillList listSkills={skillMapRow}/>)
     })
     return (
-        <section id="section-skill" className="min-h-screen items-center justify-center pt-20">
+        <section id="section-skill" className="items-center justify-center pt-20">
 
             <TopSection name="Mes compétences" />
 
