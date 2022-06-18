@@ -9,6 +9,7 @@ import SectionSchool from "./screen/SectionSchool";
 import SectionMyPersonalPage from "./screen/SectionMyPersonalPage";
 import SectionContact from "./screen/SectionContact";
 import FabScroll from "./component/fab/FabScroll";
+import WaitScreen from "./screen/WaitScreen";
 
 const Home = () => {
 
@@ -40,7 +41,7 @@ const Home = () => {
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-        return <div>Loading...</div>;
+        return <WaitScreen />;
     } else {
         return (
             <div>
