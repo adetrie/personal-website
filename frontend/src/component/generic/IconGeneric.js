@@ -19,7 +19,7 @@ import {AiFillFolderOpen} from "react-icons/ai";
 import {MdSecurity} from "react-icons/md";
 
 
-const IconGeneric = ({iconName}) => {
+const IconGeneric = ({iconName, color}) => {
     const components = {
         java: SiJava,
         spring: SiSpring,
@@ -39,7 +39,7 @@ const IconGeneric = ({iconName}) => {
         saml: MdSecurity
     };
     let TagIcon = components[iconName];
-    return (<TagIcon size={30} /> );
+    return (<TagIcon size={30} color={color}/> );
 }
 
 export default IconGeneric;

@@ -64,29 +64,29 @@ public class InitialDBInsert {
     private ArrayList<Skill> getSkills() {
         ArrayList<Skill> skills = new ArrayList<>();
 
-        SkillCategory programming = new SkillCategory("Programmation", 0);
-        SkillCategory ide = new SkillCategory("IDE", 4);
-        SkillCategory devSecOps = new SkillCategory("DevSecOps", 1);
-        SkillCategory versioning = new SkillCategory("Versioning", 3);
-        SkillCategory security = new SkillCategory("Sécurité", 2);
+        SkillCategory programming = new SkillCategory("Programmation", "#ffd53d", 0);
+        SkillCategory ide = new SkillCategory("IDE", "#48cb8a", 4);
+        SkillCategory devSecOps = new SkillCategory("DevSecOps", "#f25c54", 1);
+        SkillCategory versioning = new SkillCategory("Versioning", "#ffd53d", 3);
+        SkillCategory security = new SkillCategory("Sécurité", "#48cb8a", 2);
 
-        skills.add(new Skill("Java", 85, "java", programming));
-        skills.add(new Skill("JavaScript", 50, "javascript", programming));
-        skills.add(new Skill("React JS", 50, "reactjs", programming));
-        skills.add(new Skill("HTML/CSS", 70, "html", programming));
-        skills.add(new Skill("Spring / Spring Boot", 75, "spring", programming));
-        skills.add(new Skill("Java EE / Jakarta", 70, "java", programming));
-        skills.add(new Skill("IntelliJ IDEA", 80, "intellij", ide));
-        skills.add(new Skill("Eclipse", 70, "eclipse", ide));
-        skills.add(new Skill("Maven", 85, "maven", programming));
-        skills.add(new Skill("CI / CD", 85, "cicd", devSecOps));
-        skills.add(new Skill("Git", 70, "git", versioning));
-        skills.add(new Skill("SVN", 65, "svn", versioning));
-        skills.add(new Skill("CVS", 50, "cvs", versioning));
-        skills.add(new Skill("Docker", 60, "docker", devSecOps));
-        skills.add(new Skill("Kubernetes", 30, "k8s", devSecOps));
-        skills.add(new Skill("OAuth 2 / OpenID Connect", 60, "oauth2", security));
-        skills.add(new Skill("SAML 2", 40, "saml", security));
+        skills.add(new Skill("Java", 85, "java", "#E62E33", programming));
+        skills.add(new Skill("JavaScript", 50, "javascript", "#efd81c", programming));
+        skills.add(new Skill("React JS", 50, "reactjs", "#6ad3f3", programming));
+        skills.add(new Skill("HTML/CSS", 70, "html", "#dd4b29", programming));
+        skills.add(new Skill("Spring / Spring Boot", 75, "spring", "#73b61e", programming));
+        skills.add(new Skill("Java EE / Jakarta", 70, "java", "#f1b33d", programming));
+        skills.add(new Skill("IntelliJ IDEA", 80, "intellij", "#e62e58", ide));
+        skills.add(new Skill("Eclipse", 70, "eclipse", "#2b2152", ide));
+        skills.add(new Skill("Maven", 85, "maven", "#e96329", programming));
+        skills.add(new Skill("CI / CD", 85, "cicd", "#3b74d0", devSecOps));
+        skills.add(new Skill("Git", 70, "git", "#e74e31", versioning));
+        skills.add(new Skill("SVN", 65, "svn", "#9cb7d8", versioning));
+        skills.add(new Skill("CVS", 50, "cvs", "#05015f", versioning));
+        skills.add(new Skill("Docker", 60, "docker", "#4a92e6", devSecOps));
+        skills.add(new Skill("Kubernetes", 30, "k8s", "#386adf", devSecOps));
+        skills.add(new Skill("OAuth 2 / OpenID Connect", 60, "oauth2", "#000000", security));
+        skills.add(new Skill("SAML 2", 40, "saml", "#bb262c", security));
 
         return skills;
     }

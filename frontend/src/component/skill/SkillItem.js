@@ -17,7 +17,7 @@ const SkillItem = ({item}) => {
             </a>
             <div className="mt-4 text-center">
                 <div className="flex justify-center items-center">
-                    <IconGeneric iconName={item.logo}/>
+                    <IconGeneric iconName={item.logo} color={item.color}/>
                 </div>
                 <h2 className="">{item.skillName}</h2>
             </div>

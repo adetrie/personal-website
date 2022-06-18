@@ -23,5 +23,8 @@ public class Skill {
     private String logo;
 
     @Getter @Setter
+    private String color;
+
+    @Getter @Setter
     private SkillCategory category;
 }

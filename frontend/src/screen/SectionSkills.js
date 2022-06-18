@@ -31,7 +31,7 @@ const SectionSkills = ({skills}) => {
                     arraySkills.map((skillMapRow) => {
 
                         return <div className="mb-20 mx-32">
-                            <span className="text-xl font-semibold -mx-32">{skillMapRow.props.listSkills[0].category.skillCategoryName}</span>
+                            <span className={"text-xl font-semibold -mx-32 underline decoration-2 decoration-[" + skillMapRow.props.listSkills[0].category.color + "]"}>{skillMapRow.props.listSkills[0].category.skillCategoryName}</span>
                             <div className="flex flex-wrap -m-4">
                                 {skillMapRow}
                             </div>

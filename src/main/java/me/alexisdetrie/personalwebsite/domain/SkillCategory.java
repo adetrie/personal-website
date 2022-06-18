@@ -19,5 +19,8 @@ public class SkillCategory {
     private String skillCategoryName;
 
     @Getter @Setter
+    private String color;
+
+    @Getter @Setter
     private int order;
 }
