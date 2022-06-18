@@ -9,8 +9,8 @@ export class SectionContact extends Component {
 
     render() {
         return (
-            <section id="section-contact" className="relative">
-                <div className="absolute inset-0 bg-gray-300">
+            <section id="section-contact" className="pt-10">
+                <div className="inset-0 bg-gray-300">
                     <Map google={this.props.google} zoom={14} initialCenter={{lat: 49.611621, lng: 6.1319346}}/>
                 </div>
                 <div className="container px-5 py-24 mx-auto flex">
