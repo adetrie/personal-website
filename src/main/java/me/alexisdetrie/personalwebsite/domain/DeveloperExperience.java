@@ -18,7 +18,7 @@ import java.util.List;
 public class DeveloperExperience extends Experience {
 
     @Builder
-    public DeveloperExperience(String jobTitle, String company, LocalDate startDate, LocalDate endDate, List<ExperienceItem> experienceItems) {
-        super(jobTitle, company, startDate, endDate, experienceItems);
+    public DeveloperExperience(String jobTitle, String company, String icon, LocalDate startDate, LocalDate endDate, List<ExperienceItem> experienceItems) {
+        super(jobTitle, company, icon, startDate, endDate, experienceItems);
     }
 }

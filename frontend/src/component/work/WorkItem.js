@@ -2,6 +2,7 @@ import React from 'react';
 import '../../App.css';
 import ExperienceList from "../experience/ExperienceList";
 import moment from "moment";
+import IconGeneric from "../generic/IconGeneric";
 
 const WorkItem = ({item}) => {
 
@@ -13,8 +14,8 @@ const WorkItem = ({item}) => {
             <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-100 pointer-events-none"></div>
             </div>
-            <div
-                className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-emerald-500 bg-emerald-100 inline-flex items-center justify-center text-white relative z-10">✨
+            <div className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-emerald-500 bg-emerald-100 inline-flex items-center justify-center text-white relative z-10 p-2">
+                <IconGeneric iconName={item.icon} color="#374151" />
             </div>
             <div className="flex-grow pl-4">
                 <h2 className="mb-1 tracking-wider font-semibold">{item.jobTitle} - {item.company} &nbsp;

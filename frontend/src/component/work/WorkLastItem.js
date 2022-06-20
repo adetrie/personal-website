@@ -2,6 +2,7 @@ import React from 'react';
 import '../../App.css';
 import ExperienceList from "../experience/ExperienceList";
 import moment from "moment";
+import IconGeneric from "../generic/IconGeneric";
 
 const WorkLastItem = ({item}) => {
 
@@ -10,13 +11,8 @@ const WorkLastItem = ({item}) => {
 
     return (
         <div className="flex relative">
-            <div
-                className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-emerald-500 bg-emerald-100 inline-flex items-center justify-center text-white relative z-10">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
-                     strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                    <path d="M22 4L12 14.01l-3-3"></path>
-                </svg>
+            <div className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-emerald-500 bg-emerald-100 inline-flex items-center justify-center text-white relative z-10 p-2">
+                <IconGeneric iconName={item.icon} color="#374151" />
             </div>
             <div className="flex-grow pl-4">
                 <h2 className="mb-1 tracking-wider font-semibold">{item.jobTitle} - {item.company} &nbsp;

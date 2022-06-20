@@ -26,7 +26,7 @@ const SectionHome = () => {
                         <div className="float-right">
                             <Typewriter
                                 options={{
-                                    strings: ['un développeur Java', 'un architecte Java', 'un développeur React', 'un développeur JEE/Jakarta', 'un développeur Spring', 'un développeur Fullstack'],
+                                    strings: ['un développeur Java', 'un architecte Java', 'un développeur React', 'un développeur Java EE/Jakarta', 'un développeur Spring', 'un développeur Fullstack'],
                                     autoStart: true,
                                     loop: true,
                                 }}
