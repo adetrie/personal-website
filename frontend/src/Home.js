@@ -29,7 +29,6 @@ const Home = () => {
             .then(
                 (data) => {
                     setIsLoaded(true);
-                    console.log(data)
                     setMe(data);
                 },
                 (error) => {
