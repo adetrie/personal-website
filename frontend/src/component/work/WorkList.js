@@ -7,6 +7,8 @@ const WorkList = ({workHistories}) => {
 
     const [nbWork, setNbWork] = useState(0);
 
+    alert("workhisto" + JSON.stringify(workHistories))
+
     useEffect(() => {
         setNbWork(workHistories.length);
         // alert(workHistories);

@@ -5,6 +5,8 @@ import WorkList from "../component/work/WorkList";
 import TopSection from "../component/TopSection";
 
 const SectionExperiences = ({architectureExperiences, developerExperiences}) => {
+    alert("archi" + JSON.stringify(architectureExperiences))
+    alert("dev:" + JSON.stringify(developerExperiences))
     return (
         <section id="section-experience" className="min-h-screen items-center justify-center pt-20 worklet-canvas2">
             <TopSection name="Mes expériences professionnelles" />

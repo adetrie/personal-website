@@ -30,34 +30,34 @@ const Home = () => {
                 (data) => {
                     setIsLoaded(true);
                     setMe(data);
-                    alert("ok: " + JSON.stringify(data))
+                    // alert("ok: " + JSON.stringify(data))
                 },
                 (error) => {
                     setIsLoaded(true);
                     setError(error);
-                    alert("nok: " + error)
+                    // alert("nok: " + error)
                 }
             )
     }, [])
 
     if (error) {
-        alert("pas ok")
+        // alert("pas ok")
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-        alert("waiting")
+        // alert("waiting")
         return <WaitScreen />;
     } else {
-        alert("ok on affiche" + JSON.stringify(me))
+        // alert("ok on affiche" + JSON.stringify(me))
         return (
             <div>
                 <NavBar/>
                 <SectionHome/>
                 <SectionAbout/>
-                <SectionSkills skills={me.skills}/>
+                {/*<SectionSkills skills={me.skills}/>*/}
                 <SectionExperiences
                     architectureExperiences={me.architectureExperiences}
                     developerExperiences={me.developerExperiences}/>
-                <SectionSchool educationItems={me.educations[0]}/>
+                {/*<SectionSchool educationItems={me.educations[0]}/>*/}
                 <SectionMyPersonalPage/>
                 <SectionContact/>
                 <FabScroll />
