@@ -30,19 +30,24 @@ const Home = () => {
                 (data) => {
                     setIsLoaded(true);
                     setMe(data);
+                    alert("ok: " + JSON.stringify(me))
                 },
                 (error) => {
                     setIsLoaded(true);
                     setError(error);
+                    alert("nok: " + error)
                 }
             )
     }, [])
 
     if (error) {
+        alert("pas ok")
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
+        alert("waiting")
         return <WaitScreen />;
     } else {
+        alert("ok on affiche")
         return (
             <div>
                 <NavBar/>
@@ -58,19 +63,19 @@ const Home = () => {
                 <FabScroll />
 
                 <div>
-                    all: <br/>
-                    {JSON.stringify(me)}
-                    <br/>
-                    me.skill: <br/>
-                    {JSON.stringify(me.skills)}
-                    <br/>
-                    me.architectureExperiences: <br/>
-                    {JSON.stringify(me.architectureExperiences)}
-                    <br/>me.developerExperiences: <br/>
-                    {JSON.stringify(me.developerExperiences)}
-                    <br/>me.educations[0]: <br/>
-                    {JSON.stringify(me.educations[0])}
-                    <br/>
+                    {/*all: <br/>*/}
+                    {/*{JSON.stringify(me)}*/}
+                    {/*<br/>*/}
+                    {/*me.skill: <br/>*/}
+                    {/*{JSON.stringify(me.skills)}*/}
+                    {/*<br/>*/}
+                    {/*me.architectureExperiences: <br/>*/}
+                    {/*{JSON.stringify(me.architectureExperiences)}*/}
+                    {/*<br/>me.developerExperiences: <br/>*/}
+                    {/*{JSON.stringify(me.developerExperiences)}*/}
+                    {/*<br/>me.educations[0]: <br/>*/}
+                    {/*{JSON.stringify(me.educations[0])}*/}
+                    {/*<br/>*/}
                 </div>
             </div>
         );

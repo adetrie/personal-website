@@ -24,8 +24,8 @@ const SectionSkills = ({skills}) => {
     return (
         <section id="section-skill" className="items-center justify-center pt-20">
 
-            SKILLS: <br/>
-            {JSON.stringify(skills)}
+            {/*SKILLS: <br/>*/}
+            {/*{JSON.stringify(skills)}*/}
 
             <TopSection name="Mes compétences" />
 
