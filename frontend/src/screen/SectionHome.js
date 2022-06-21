@@ -5,9 +5,11 @@ import Typewriter from 'typewriter-effect';
 
 const SectionHome = () => {
 
-    CSS.paintWorklet.addModule(
-        "https://unpkg.com/@georgedoescode/fluid-pattern-worklet"
-    );
+    if ('paintWorklet' in CSS) {
+        CSS.paintWorklet.addModule(
+            "https://unpkg.com/@georgedoescode/fluid-pattern-worklet"
+        );
+    }
 
     return (
         <section id="section-home" className="min-h-screen flex items-center justify-center pt-20">
