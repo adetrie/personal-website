@@ -37,6 +37,7 @@ const Home = () => {
                 }
             )
     }, [])
+
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -44,17 +45,18 @@ const Home = () => {
     } else {
         return (
             <div>
-                <NavBar/>
-                <SectionHome/>
-                <SectionAbout/>
-                <SectionSkills skills={me.skills}/>
-                <SectionExperiences
-                    architectureExperiences={me.architectureExperiences}
-                    developerExperiences={me.developerExperiences}/>
-                <SectionSchool educationItems={me.educations[0]}/>
-                <SectionMyPersonalPage/>
-                <SectionContact/>
-                <FabScroll />
+                {alert(me)}
+                {/*<NavBar/>*/}
+                {/*<SectionHome/>*/}
+                {/*<SectionAbout/>*/}
+                {/*<SectionSkills skills={me.skills}/>*/}
+                {/*<SectionExperiences*/}
+                {/*    architectureExperiences={me.architectureExperiences}*/}
+                {/*    developerExperiences={me.developerExperiences}/>*/}
+                {/*<SectionSchool educationItems={me.educations[0]}/>*/}
+                {/*<SectionMyPersonalPage/>*/}
+                {/*<SectionContact/>*/}
+                {/*<FabScroll />*/}
             </div>
         );
     }
