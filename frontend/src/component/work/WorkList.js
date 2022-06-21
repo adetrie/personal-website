@@ -9,7 +9,7 @@ const WorkList = ({workHistories}) => {
 
     useEffect(() => {
         setNbWork(workHistories.length);
-        alert(workHistories);
+        // alert(workHistories);
     });
 
     return (

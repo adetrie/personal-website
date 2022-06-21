@@ -45,18 +45,33 @@ const Home = () => {
     } else {
         return (
             <div>
-                {alert(me)}
-                {/*<NavBar/>*/}
-                {/*<SectionHome/>*/}
-                {/*<SectionAbout/>*/}
-                {/*<SectionSkills skills={me.skills}/>*/}
-                {/*<SectionExperiences*/}
-                {/*    architectureExperiences={me.architectureExperiences}*/}
-                {/*    developerExperiences={me.developerExperiences}/>*/}
-                {/*<SectionSchool educationItems={me.educations[0]}/>*/}
-                {/*<SectionMyPersonalPage/>*/}
-                {/*<SectionContact/>*/}
-                {/*<FabScroll />*/}
+                <NavBar/>
+                <SectionHome/>
+                <SectionAbout/>
+                <SectionSkills skills={me.skills}/>
+                <SectionExperiences
+                    architectureExperiences={me.architectureExperiences}
+                    developerExperiences={me.developerExperiences}/>
+                <SectionSchool educationItems={me.educations[0]}/>
+                <SectionMyPersonalPage/>
+                <SectionContact/>
+                <FabScroll />
+
+                <div>
+                    all: <br/>
+                    {JSON.stringify(me)}
+                    <br/>
+                    me.skill: <br/>
+                    {JSON.stringify(me.skills)}
+                    <br/>
+                    me.architectureExperiences: <br/>
+                    {JSON.stringify(me.architectureExperiences)}
+                    <br/>me.developerExperiences: <br/>
+                    {JSON.stringify(me.developerExperiences)}
+                    <br/>me.educations[0]: <br/>
+                    {JSON.stringify(me.educations[0])}
+                    <br/>
+                </div>
             </div>
         );
     }
