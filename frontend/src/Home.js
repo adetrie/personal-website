@@ -51,15 +51,15 @@ const Home = () => {
         return (
             <div>
                 <NavBar/>
-                <SectionHome/>
-                <SectionAbout/>
+                {/*<SectionHome/>*/}
+                {/*<SectionAbout/>*/}
                 {/*<SectionSkills skills={me.skills}/>*/}
-                <SectionExperiences
-                    architectureExperiences={me.architectureExperiences}
-                    developerExperiences={me.developerExperiences}/>
+                {/*<SectionExperiences*/}
+                {/*    architectureExperiences={me.architectureExperiences}*/}
+                {/*    developerExperiences={me.developerExperiences}/>*/}
                 {/*<SectionSchool educationItems={me.educations[0]}/>*/}
-                <SectionMyPersonalPage/>
-                <SectionContact/>
+                {/*<SectionMyPersonalPage/>*/}
+                {/*<SectionContact/>*/}
                 <FabScroll />
 
                 <div>
