@@ -1,18 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../App.css';
 import Typewriter from 'typewriter-effect';
 
 
 const SectionHome = () => {
 
+    const [appleDevice, setAppleDevice] = useState(false);
+
     if ('paintWorklet' in CSS) {
         CSS.paintWorklet.addModule(
             "https://unpkg.com/@georgedoescode/fluid-pattern-worklet"
         );
+    } else {
+        setAppleDevice(true);
     }
 
     return (
-        <section id="section-home" className="min-h-screen flex items-center justify-center pt-20">
+        <section id="section-home" className="min-h-screen flex items-center justify-center pt-20"  style={{backgroundColor: appleDevice ? '#1d1934' : 'transparent',}}>
             <div className="worklet-canvas"></div>
             <div
                 className="backdrop-blur-xl text-white lg:m-10 md:m-3 h-auto py-10 px-7 lg:py-20 lg:px-10 w-3/4 lg:w-2/4 mx-auto rounded-3xl shadow-xl hover:rotate-1 transition-transform">
