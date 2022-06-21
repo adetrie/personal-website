@@ -7,13 +7,13 @@ const SectionSkills = ({skills}) => {
 
     skills.sort((skill1, skill2) => skill1.category.order - skill2.category.order);
     var mapSkills = new Map();
-    // skills.map((skill, index) => {
-    //     if (mapSkills.get(skill.category.order) === undefined) {
-    //         mapSkills.set(skill.category.order, [])
-    //     }
-    //     mapSkills.get(skill.category.order).push(skill)
-    //     // mapSkills.set(skill.category.order, mapSkills.get(skill.category.order).push(skill))
-    // })
+    skills.map((skill, index) => {
+        if (mapSkills.get(skill.category.order) === undefined) {
+            mapSkills.set(skill.category.order, [])
+        }
+        mapSkills.get(skill.category.order).push(skill)
+        // mapSkills.set(skill.category.order, mapSkills.get(skill.category.order).push(skill))
+    })
     let lastCategory = "";
 
     var arraySkills = []
