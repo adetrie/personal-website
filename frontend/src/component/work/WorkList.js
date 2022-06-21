@@ -9,23 +9,24 @@ const WorkList = ({workHistories}) => {
 
     useEffect(() => {
         setNbWork(workHistories.length);
+        alert(workHistories);
     });
 
     return (
         <div className="lg:w-3/5 md:w-1/2">
             {
-                workHistories.map((workHistory, index) => {
-                    if (index + 1 !== nbWork) {
-                        return <WorkItem
-                            key={workHistory.description}
-                            item={workHistory}
-                        />
-                    } else {
-                        return <WorkLastItem
-                            key={workHistory.description}
-                            item={workHistory}
-                        />
-                    }
+                // workHistories.map((workHistory, index) => {
+                //     if (index + 1 !== nbWork) {
+                //         return <WorkItem
+                //             key={workHistory.description}
+                //             item={workHistory}
+                //         />
+                //     } else {
+                //         return <WorkLastItem
+                //             key={workHistory.description}
+                //             item={workHistory}
+                //         />
+                //     }
                 })
             }
         </div>
