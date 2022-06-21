@@ -30,7 +30,7 @@ const Home = () => {
                 (data) => {
                     setIsLoaded(true);
                     setMe(data);
-                    alert("ok: " + JSON.stringify(me))
+                    alert("ok: " + JSON.stringify(data))
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -47,7 +47,7 @@ const Home = () => {
         alert("waiting")
         return <WaitScreen />;
     } else {
-        alert("ok on affiche")
+        alert("ok on affiche" + JSON.stringify(me))
         return (
             <div>
                 <NavBar/>
