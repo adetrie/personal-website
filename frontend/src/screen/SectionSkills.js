@@ -24,6 +24,9 @@ const SectionSkills = ({skills}) => {
     return (
         <section id="section-skill" className="items-center justify-center pt-20">
 
+            SKILLS: <br/>
+            {JSON.stringify(skills)}
+
             <TopSection name="Mes compétences" />
 
             <div className="container px-5 py-24 mx-auto">

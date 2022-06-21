@@ -14,6 +14,9 @@ const WorkList = ({workHistories}) => {
 
     return (
         <div className="lg:w-3/5 md:w-1/2">
+            SKILLS: <br/>
+            {JSON.stringify(workHistories)}
+
             {
                 // workHistories.map((workHistory, index) => {
                 //     if (index + 1 !== nbWork) {
