@@ -15,19 +15,19 @@ const ExperienceList = ({experienceHistories}) => {
         <div className="w-full">
 
             {
-                experienceHistories.map((experienceHistory, index) => {
-                    if (index + 1 !== nbExperience) {
-                        return <WorkItem
-                            key={experienceHistory.description}
-                            item={experienceHistory}
-                        />
-                    } else {
-                        return <WorkLastItem
-                            key={experienceHistory.description}
-                            item={experienceHistory}
-                        />
-                    }
-                })
+                // experienceHistories.map((experienceHistory, index) => {
+                //     if (index + 1 !== nbExperience) {
+                //         return <WorkItem
+                //             key={experienceHistory.description}
+                //             item={experienceHistory}
+                //         />
+                //     } else {
+                //         return <WorkLastItem
+                //             key={experienceHistory.description}
+                //             item={experienceHistory}
+                //         />
+                //     }
+                // })
             }
 
         </div>

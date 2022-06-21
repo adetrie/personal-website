@@ -7,11 +7,11 @@ const SkillList = ({listSkills}) => {
     return (
         <>
             {
-                listSkills.map((skill, index) => {
-                    return <SkillItem
-                        key={skill.skillName}
-                        item={skill}/>
-                })
+                // listSkills.map((skill, index) => {
+                //     return <SkillItem
+                //         key={skill.skillName}
+                //         item={skill}/>
+                // })
             }
         </>
     );
