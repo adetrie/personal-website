@@ -18,23 +18,17 @@ const SectionMyPersonalPage = () => {
                 <div id="azure" className="w-full lg:w-1/6 p-20 bg-transparent border-amber-400 m-10"><img src="azure.png" alt="work"/></div>
             </div>
 
-
-            {/*<div id="schema" className="min-h-screen items-center justify-center pt-20 arrow-style">*/}
-            {/*toto*/}
-            {/*</div>*/}
-
-
             <Xarrow
-                start="me-develop" //can be react ref
-                end="github" //or an id
+                start="me-develop"
+                end="github"
             />
             <Xarrow
-                start="github" //can be react ref
-                end="azdevops" //or an id
+                start="github"
+                end="azdevops"
             />
             <Xarrow
-                start="azdevops" //can be react ref
-                end="azure" //or an id
+                start="azdevops"
+                end="azure"
             />
         </section>
     );
