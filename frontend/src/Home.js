@@ -51,7 +51,7 @@ const Home = () => {
         return (
             <div>
                 <NavBar/>
-                <SectionHome/>
+                {/*<SectionHome/>*/}
                 <SectionAbout/>
                 {/*<SectionSkills skills={me.skills}/>*/}
                 {/*<SectionExperiences*/}
