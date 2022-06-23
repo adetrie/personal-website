@@ -15,19 +15,19 @@ const SchoolList = ({schoolHistories}) => {
     return (
         <div>
             {
-                // schoolHistories.map((schoolHistory, index) => {
-                //     if (index + 1 !== nbSchool) {
-                //         return <SchoolItem
-                //             key={schoolHistory.ecole}
-                //             item={schoolHistory}
-                //         />
-                //     } else {
-                //         return <SchoolLastItem
-                //             key={schoolHistory.ecole}
-                //             item={schoolHistory}
-                //         />
-                //     }
-                // })
+                schoolHistories.map((schoolHistory, index) => {
+                    if (index + 1 !== nbSchool) {
+                        return <SchoolItem
+                            key={schoolHistory.ecole}
+                            item={schoolHistory}
+                        />
+                    } else {
+                        return <SchoolLastItem
+                            key={schoolHistory.ecole}
+                            item={schoolHistory}
+                        />
+                    }
+                })
             }
         </div>
     );

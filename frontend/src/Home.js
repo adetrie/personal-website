@@ -57,7 +57,7 @@ const Home = () => {
                 {/*<SectionExperiences*/}
                 {/*    architectureExperiences={me.architectureExperiences}*/}
                 {/*    developerExperiences={me.developerExperiences}/>*/}
-                {/*<SectionSchool educationItems={me.educations[0]}/>*/}
+                <SectionSchool educationItems={me.educations[0]}/>
                 <SectionMyPersonalPage/>
                 <SectionContact/>
                 <FabScroll />
