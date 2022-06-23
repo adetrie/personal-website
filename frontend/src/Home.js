@@ -53,7 +53,7 @@ const Home = () => {
                 <NavBar/>
                 {/*<SectionHome/>*/}
                 <SectionAbout/>
-                {/*<SectionSkills skills={me.skills}/>*/}
+                <SectionSkills skills={me.skills}/>
                 {/*<SectionExperiences*/}
                 {/*    architectureExperiences={me.architectureExperiences}*/}
                 {/*    developerExperiences={me.developerExperiences}/>*/}
