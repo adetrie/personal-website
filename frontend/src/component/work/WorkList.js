@@ -7,11 +7,10 @@ const WorkList = ({workHistories}) => {
 
     const [nbWork, setNbWork] = useState(0);
 
-    alert("workhisto" + JSON.stringify(workHistories))
+    // alert("workhisto" + JSON.stringify(workHistories))
 
     useEffect(() => {
         setNbWork(workHistories.length);
-        // alert(workHistories);
     });
 
     return (
@@ -20,18 +19,18 @@ const WorkList = ({workHistories}) => {
             {/*{JSON.stringify(workHistories)}*/}
 
             {
-                // workHistories.map((workHistory, index) => {
-                //     if (index + 1 !== nbWork) {
-                //         return <WorkItem
-                //             key={workHistory.description}
-                //             item={workHistory}
-                //         />
-                //     } else {
-                //         return <WorkLastItem
-                //             key={workHistory.description}
-                //             item={workHistory}
-                //         />
-                //     }
+                workHistories.map((workHistory, index) => {
+                    if (index + 1 !== nbWork) {
+                        return <WorkItem
+                            key={workHistory.description}
+                            item={workHistory}
+                        />
+                    } else {
+                        return <WorkLastItem
+                            key={workHistory.description}
+                            item={workHistory}
+                        />
+                    }
                 })
             }
         </div>
