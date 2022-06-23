@@ -1,41 +1,52 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import '../App.css';
-import SkillList from "../component/skill/SkillList";
 import TopSection from "../component/TopSection";
+import SkillItem from "../component/skill/SkillItem";
 
 const SectionSkills = ({skills}) => {
 
-    skills.sort((skill1, skill2) => skill1.category.order - skill2.category.order);
-    var mapSkills = new Map();
-    skills.map((skill, index) => {
-        if (mapSkills.get(skill.category.order) === undefined) {
-            mapSkills.set(skill.category.order, [])
-        }
-        mapSkills.get(skill.category.order).push(skill)
-        // mapSkills.set(skill.category.order, mapSkills.get(skill.category.order).push(skill))
-    })
-    let lastCategory = "";
+    const [skillsSorted, setSkillsSorted] = useState(skills);
+    const [categories, setCategories] = useState([]);
 
-    var arraySkills = []
+    useEffect(() => {
 
-    mapSkills.forEach((skillMapRow, key) => {
-        arraySkills.push(<SkillList listSkills={skillMapRow}/>)
-    })
+        skillsSorted.sort((skill1, skill2) => {
+            if(skill1.category.order < skill2.category.order) return -1;
+            if(skill1.category.order > skill2.category.order) return 1;
+            if(skill1.skillLevel > skill2.skillLevel) return -1;
+            if(skill1.skillLevel < skill2.skillLevel) return 1;
+        });
+
+        // let skillOnMap = new Map();
+        var filteredCategories = [];
+        skillsSorted.map((skill, key) => {
+            filteredCategories.push(skill.category.skillCategoryName);
+        })
+        setCategories([...new Set(filteredCategories)])
+    }, [])
+
+
     return (
-        <section id="section-skill" className="items-center justify-center pt-20">
+        <section id="section-skill" className="items-center justify-center pt-20 w-full">
 
             <TopSection name="Mes compétences" />
 
-            <div className="container px-5 py-24 mx-auto">
+            <div className="container justify-center w-full">
                 {
-                    arraySkills.map((skillMapRow) => {
-
-                        return <div className="mb-20 mx-32">
-                            <span className={"text-xl font-semibold -mx-32 underline decoration-2 decoration-[" + skillMapRow.props.listSkills[0].category.color + "]"}>{skillMapRow.props.listSkills[0].category.skillCategoryName}</span>
-                            <div className="flex flex-wrap -m-4">
-                                {skillMapRow}
+                    categories.map((category, key) => {
+                        let skillsFiltered = skillsSorted.filter(skill => skill.category.skillCategoryName === category);
+                        return <div className="lg:mx-32 mt-24 w-full">
+                            <span className="text-xl font-semibold underline decoration-2 decoration-black text-black ml-10 lg:ml-0">{category}</span>
+                            <div className="flex flex-wrap justify-center ">
+                                {
+                                    skillsFiltered.map((skillFiltered, key) => {
+                                        return  <div className="w-full lg:w-1/4">
+                                            <SkillItem item={skillFiltered}/>
+                                        </div>
+                                    })
+                                }
                             </div>
-                        </div>
+                        </div>;
                     })
                 }
             </div>
