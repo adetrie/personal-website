@@ -129,7 +129,7 @@ public class InitialDBInsert {
     }
     private DeveloperExperience pwcDeveloperExperience() {
         ArrayList<Experience.ExperienceItem> experienceItems = new ArrayList<>();
-        experienceItems.add(new Experience.ExperienceItem("Interne", "Java/JEE, Eclipse (RAD), WebSphere 8, Oracle DB, EJB2, EJB 3, Hibernate, Struts 2, Tiles, SOAP, REST, jQuery, comptabilité, LuxTrust.", "graph"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Java/JEE, Eclipse (RAD), WebSphere 8, Oracle DB, EJB 2, EJB 3, Hibernate, Struts 2, Tiles, SOAP, REST, jQuery, comptabilité, LuxTrust.", "graph"));
 
         DeveloperExperience developerExperience = DeveloperExperience.builder()
                 .jobTitle("Java developer ")
@@ -199,9 +199,9 @@ public class InitialDBInsert {
     private List<ArchitectureExperience> getArchitectureExperiences() {
         ArrayList<Experience.ExperienceItem> experienceItems = new ArrayList<>();
         experienceItems.add(new Experience.ExperienceItem("Interne", "Réalisation d’un framework basé sur Spring/Spring Boot", "spring"));
-        experienceItems.add(new Experience.ExperienceItem("Interne", "Guideline et migration d’applications WebSphere 8 vers WebSphere 9", "ibm"));
-        experienceItems.add(new Experience.ExperienceItem("Interne", "Guideline et migration d’applications sur Maven", "maven"));
-        experienceItems.add(new Experience.ExperienceItem("Interne", "Guideline et migration d’applications sur TFS/Azure DevOps", "cicd"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Guidelines et migration d’applications WebSphere 8 vers WebSphere 9", "ibm"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Guidelines et migration d’applications sur Maven", "maven"));
+        experienceItems.add(new Experience.ExperienceItem("Interne", "Guidelines et migration d’applications sur TFS/Azure DevOps", "cicd"));
         experienceItems.add(new Experience.ExperienceItem("Interne", "Participation à la mise en place de SSDLC", "oauth2"));
         experienceItems.add(new Experience.ExperienceItem("Interne", "Participation à la migration de JVM Oracle vers JVM Azul", "java"));
         experienceItems.add(new Experience.ExperienceItem("Interne", "Mise en place d’authentifications « modernes » (OAuth 2 / SAML)", "security"));

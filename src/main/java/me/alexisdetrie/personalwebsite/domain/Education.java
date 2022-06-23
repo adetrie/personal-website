@@ -20,5 +20,5 @@ public class Education {
     @Getter @Setter
     List<EducationItem> educationItems;
 
-    public record EducationItem(String ecole, String titre, int startYear, int endYear){}
+    public record EducationItem(String school, String titre, int startYear, int endYear){}
 }

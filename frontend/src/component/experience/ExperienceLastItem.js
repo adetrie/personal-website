@@ -10,7 +10,7 @@ const ExperienceLastItem = ({item}) => {
                 <IconGeneric iconName={item.icon} color="#374151" />
             </div>
             <div className="flex-grow pl-4">
-                <h2 className="mb-1 tracking-wider">{item.company}</h2>
+                <span className="mb-1 tracking-wider">{item.company}</span>
                 <p className="leading-relaxed italic">{item.description}</p>
             </div>
         </div>

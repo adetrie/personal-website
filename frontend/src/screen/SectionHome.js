@@ -29,7 +29,7 @@ const SectionHome = () => {
                 </div>
 
                 <div className="inline-block align-top w-full text-center">
-                    <h2 className="lg:text-3xl text-2xl inline-block">
+                    <span className="lg:text-3xl text-2xl inline-block">
                         Je suis&nbsp;
                         <div className="float-right">
                             <Typewriter
@@ -40,7 +40,7 @@ const SectionHome = () => {
                                 }}
                             />
                         </div>
-                    </h2>
+                    </span>
                 </div>
             </div>
         </section>

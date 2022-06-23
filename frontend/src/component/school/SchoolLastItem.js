@@ -10,7 +10,7 @@ const SchoolLastItem = ({item}) => {
                 <IoSchoolOutline size={30} color="#374151"/>
             </div>
             <div className="flex-grow pl-4">
-                <h2 className="mb-1 tracking-wider  font-semibold">{item.ecole} - {item.titre}</h2>
+                <span className="mb-1 tracking-wider  font-semibold">{item.school} - {item.titre}</span>
                 <p className="leading-relaxed mt-5">
                 </p>
             </div>

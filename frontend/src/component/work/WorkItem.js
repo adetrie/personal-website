@@ -18,10 +18,10 @@ const WorkItem = ({item}) => {
                 <IconGeneric iconName={item.icon} color="#374151" />
             </div>
             <div className="flex-grow pl-4">
-                <h2 className="mb-1 tracking-wider font-semibold">{item.jobTitle} - {item.company} &nbsp;
+                <span className="mb-1 tracking-wider font-semibold">{item.jobTitle} - {item.company} &nbsp;
                     <span
                         className="inline-block py-1 px-2 rounded bg-emerald-400 text-white text-xs font-medium tracking-widest">{startDate} au {endDate}</span>
-                </h2>
+                </span>
                 <p className="leading-relaxed mt-5">
                     <ExperienceList
                         experienceHistories={item.experienceItems}

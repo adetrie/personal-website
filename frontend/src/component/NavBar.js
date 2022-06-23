@@ -117,25 +117,25 @@ const NavBar = () => {
                     <div className="md:hidden" id="mobile-menu">
                         <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                            <Link activeClass="active" smooth spy to="section-home"
-                               className="text-gray-800 transition-colors duration-200 transform border-b-2 border-blue-500 mx-1.5 sm:mx-6 block">Home</Link>
+                               className="text-gray-800 transition-colors duration-200 transform border-b-2 border-blue-500 mx-1.5 sm:mx-6 block" onClick={() => setIsOpen(false)}>Home</Link>
 
                             <Link activeClass="active" smooth spy to="section-about"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">A propos</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block" onClick={() => setIsOpen(false)}>A propos</Link>
 
                             <Link activeClass="active" smooth spy to="section-skill"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Mes compétences</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block" onClick={() => setIsOpen(false)}>Mes compétences</Link>
 
                             <Link activeClass="active" smooth spy to="section-experience"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Mes expériences pro</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block" onClick={() => setIsOpen(false)}>Mes expériences pro</Link>
 
                             <Link activeClass="active" smooth spy to="section-school"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Mes études</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block" onClick={() => setIsOpen(false)}>Mes études</Link>
 
                             <Link activeClass="active" smooth spy to="section-my-personal-page"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Ma page personelle</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block" onClick={() => setIsOpen(false)}>Ma page personelle</Link>
 
                             <Link activeClass="active" smooth spy to="section-contact"
-                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block">Me contacter</Link>
+                               className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform hover:border-amber-400 mx-1.5 sm:mx-6 block" onClick={() => setIsOpen(false)}>Me contacter</Link>
 
                             <a href="https://www.linkedin.com/in/detriealexis/" target="_blank"
                                className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform mx-1.5 sm:mx-6 block">

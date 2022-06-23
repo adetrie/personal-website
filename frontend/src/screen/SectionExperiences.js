@@ -22,7 +22,7 @@ const SectionExperiences = ({architectureExperiences, developerExperiences}) => 
                     </div>
                 </DefaultContainer>
 
-                <span className="text-xl font-semibold">Mes expériences en tant que développeurs</span>
+                <span className="text-xl font-semibold">Mes expériences en tant que développeur</span>
                 <DefaultContainer>
                     <WorkList
                         workHistories={developerExperiences}

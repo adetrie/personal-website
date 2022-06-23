@@ -17,12 +17,12 @@ const SchoolList = ({schoolHistories}) => {
                 schoolHistories.map((schoolHistory, index) => {
                     if (index + 1 !== nbSchool) {
                         return <SchoolItem
-                            key={schoolHistory.ecole}
+                            key={schoolHistory.school}
                             item={schoolHistory}
                         />
                     } else {
                         return <SchoolLastItem
-                            key={schoolHistory.ecole}
+                            key={schoolHistory.school}
                             item={schoolHistory}
                         />
                     }
