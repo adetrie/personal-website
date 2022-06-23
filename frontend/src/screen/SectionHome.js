@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../App.css';
 import Typewriter from 'typewriter-effect';
 
@@ -7,13 +7,15 @@ const SectionHome = () => {
 
     const [appleDevice, setAppleDevice] = useState(false);
 
-    if ('paintWorklet' in CSS) {
-        CSS.paintWorklet.addModule(
-            "https://unpkg.com/@georgedoescode/fluid-pattern-worklet"
-        );
-    } else {
-        setAppleDevice(true);
-    }
+    useEffect(() =>{
+        if ('paintWorklet' in CSS) {
+            CSS.paintWorklet.addModule(
+                "https://unpkg.com/@georgedoescode/fluid-pattern-worklet"
+            );
+        } else {
+            setAppleDevice(true);
+        }
+    }, [])
 
     return (
         <section id="section-home" className="min-h-screen flex items-center justify-center pt-20"  style={{backgroundColor: appleDevice ? '#1d1934' : 'transparent',}}>

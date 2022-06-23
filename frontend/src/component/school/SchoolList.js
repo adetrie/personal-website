@@ -9,7 +9,6 @@ const SchoolList = ({schoolHistories}) => {
 
     useEffect(() => {
         setNbSchool(schoolHistories.length);
-        console.log(schoolHistories);
     });
 
     return (
