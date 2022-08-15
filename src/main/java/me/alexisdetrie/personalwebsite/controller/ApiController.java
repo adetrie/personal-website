@@ -3,6 +3,7 @@ package me.alexisdetrie.personalwebsite.controller;
 import lombok.AllArgsConstructor;
 import me.alexisdetrie.personalwebsite.domain.User;
 import me.alexisdetrie.personalwebsite.service.UserService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,7 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
+@CrossOrigin
 public class ApiController {
 
     private UserService userService;
@@ -25,4 +27,5 @@ public class ApiController {
     public Mono<User> getUser() {
         return userService.getMe();
     }
+
 }

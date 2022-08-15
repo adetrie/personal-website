@@ -22,6 +22,9 @@ public abstract class Experience {
     private String company;
 
     @Getter @Setter
+    private String icon;
+
+    @Getter @Setter
     private LocalDate startDate;
 
     @Getter @Setter
@@ -30,5 +33,5 @@ public abstract class Experience {
     @Getter @Setter
     private List<ExperienceItem> experienceItems;
 
-    public record ExperienceItem(String company, String description) {}
+    public record ExperienceItem(String company, String description, String icon) {}
 }

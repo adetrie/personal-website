@@ -5,20 +5,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 /**
- * Entity : represents an education
+ * Entity : represents a skill category
  *
  * @author Alexis
  * @since 1.0.0
  */
 @AllArgsConstructor
 @NoArgsConstructor
-public class Education {
+public class SkillCategory {
 
     @Getter @Setter
-    List<EducationItem> educationItems;
+    private String skillCategoryName;
 
-    public record EducationItem(String school, String titre, int startYear, int endYear){}
+    @Getter @Setter
+    private String color;
+
+    @Getter @Setter
+    private int order;
 }

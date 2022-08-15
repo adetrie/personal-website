@@ -18,7 +18,7 @@ import java.util.List;
 public class ArchitectureExperience extends Experience {
 
     @Builder
-    public ArchitectureExperience(String jobTitle, String company, LocalDate startDate, LocalDate endDate, List<ExperienceItem> experienceItems) {
-        super(jobTitle, company, startDate, endDate, experienceItems);
+    public ArchitectureExperience(String jobTitle, String company, String icon, LocalDate startDate, LocalDate endDate, List<ExperienceItem> experienceItems) {
+        super(jobTitle, company, icon, startDate, endDate, experienceItems);
     }
 }
