@@ -1,4 +1,4 @@
-name: Maven / package
+name: Maven / package -P native
 
 on:
   push:
@@ -20,4 +20,4 @@ jobs:
           distribution: 'adopt'
           cache: maven
       - name: Build with Maven
-        run: mvn -B package --file backend/pom.xml
+        run: mvn -B -P native package --file backend/pom.xml
